@@ -18,14 +18,21 @@ if (platform === "win32") {
   filename = "tls-client-linux";
   extension = "so";
 
-  let releaseDetails = readFileSync("/etc/os-release", "utf8");
+  let releaseDetails = fs.readFileSync("/etc/os-release", "utf8");
   const lines = releaseDetails.split("\n");
   const release = {};
-  lines.forEach((line, _) => {
-    // Split the line into an array of words delimited by '='
-    const words = line.split("=");
-    release[words[0].trim().toLowerCase()] = words[1].trim();
-  });
+  lines.forEach((line) => {
+  if (!line || !line.includes("=")) return;
+
+  const index = line.indexOf("=");
+  const key = line.slice(0, index).trim().toLowerCase();
+  const value = line.slice(index + 1).trim();
+
+  if (key) {
+    release[key] = value;
+  }
+});
+
 
   if (release.id.toLowerCase().includes("ubuntu")) {
     distribution = "ubuntu-amd64";
