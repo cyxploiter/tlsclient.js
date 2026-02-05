@@ -1,18 +1,47 @@
 {
-  "dependencies": {"axios": "^1.6.5", "ffi-rs": "^1.0.43", "workerpool": "^9.0.4"},
-  "scripts": {"build": "tsc", "prepare": "npm run build", "postinstall": "node ./scripts/postinstall.js"},
+  "dependencies": {
+    "axios": "^1.6.5",
+    "ffi-rs": "^1.0.43",
+    "workerpool": "^9.0.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "postinstall": "node ./scripts/postinstall.js"
+  },
   "name": "@dryft/tlsclient",
   "version": "1.0.8",
-  "peerDependencies": {"typescript": "^5.0.0"},
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
   "description": "An axios based wrapper for `bogdanfinn/tls-client` based on ffi-rs for unparalleled performance and usability.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "directories": {"lib": "lib"},
-  "devDependencies": {},
-  "repository": {"type": "git", "url": "git+https://github.com/heydryft/tlsclient.js.git"},
-  "keywords": ["tls", "js", "ts", "javascript", "typescript", "browser", "chrome", "request"],
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.0",
+    "typescript": "^5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heydryft/tlsclient.js.git"
+  },
+  "keywords": [
+    "tls",
+    "js",
+    "ts",
+    "javascript",
+    "typescript",
+    "browser",
+    "chrome",
+    "request"
+  ],
   "author": "heydryft",
   "license": "ISC",
-  "bugs": {"url": "https://github.com/heydryft/tlsclient.js/issues"},
+  "bugs": {
+    "url": "https://github.com/heydryft/tlsclient.js/issues"
+  },
   "homepage": "https://github.com/heydryft/tlsclient.js#readme"
 }
