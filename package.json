@@ -11,19 +11,14 @@
   },
   "name": "@dryft/tlsclient",
   "version": "1.0.8",
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
+  "peerDependencies": {},
   "description": "An axios based wrapper for `bogdanfinn/tls-client` based on ffi-rs for unparalleled performance and usability.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "directories": {
     "lib": "lib"
   },
-  "devDependencies": {
-    "@types/node": "^25.2.0",
-    "typescript": "^5.9.3"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/heydryft/tlsclient.js.git"
